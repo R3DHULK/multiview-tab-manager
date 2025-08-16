@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>MultiView</title>
+    <link rel="stylesheet" href="../styles/popup.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>MultiView</h1>
+            <button id="settings-btn" class="icon-button">⚙️</button>
+        </header>
+
+        <div id="main-view">
+            <div class="section">
+                <h2>Open Tabs</h2>
+                <div class="tabs-list" id="tabs-container">
+                    <!-- Tabs will be populated here -->
+                    <div class="loading">Loading tabs...</div>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button id="create-view-btn" class="primary-btn">Create MultiView</button>
+                <div class="layout-options">
+                    <button data-layout="grid" class="layout-btn active">Grid</button>
+                    <button data-layout="horizontal" class="layout-btn">Horizontal</button>
+                    <button data-layout="vertical" class="layout-btn">Vertical</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="settings-view" class="hidden">
+            <h2>Settings</h2>
+
+            <div class="setting-group">
+                <label for="theme-select">Theme</label>
+                <select id="theme-select">
+                    <option value="dark-glass">Dark Glassmorphism</option>
+                    <option value="light-glass">Light Glassmorphism</option>
+                    <option value="dark-solid">Dark Solid</option>
+                    <option value="light-solid">Light Solid</option>
+                </select>
+            </div>
+
+            <div class="setting-group">
+                <label for="blur-range">Blur Amount</label>
+                <input type="range" id="blur-range" min="0" max="20" step="1" value="10">
+                <span id="blur-value">10px</span>
+            </div>
+
+            <div class="setting-group">
+                <label for="opacity-range">Panel Opacity</label>
+                <input type="range" id="opacity-range" min="0.3" max="1" step="0.05" value="0.8">
+                <span id="opacity-value">0.8</span>
+            </div>
+
+            <div class="actions">
+                <button id="save-settings-btn" class="primary-btn">Save</button>
+                <button id="cancel-settings-btn" class="secondary-btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>

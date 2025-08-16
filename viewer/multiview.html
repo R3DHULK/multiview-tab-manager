@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>MultiView</title>
+    <link rel="stylesheet" href="../styles/multiview.css">
+    <link rel="shortcut icon" href="/icons/icon128.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="toolbar">
+        <div class="logo">MultiView</div>
+        <div class="controls">
+            <button id="add-tab-btn" class="control-btn">+ Add Tab</button>
+            <button id="layout-btn" class="control-btn">Change Layout</button>
+            <button id="settings-btn" class="control-btn">Settings</button>
+        </div>
+    </div>
+
+    <div id="container" class="tabs-container grid">
+        <!-- Tabs will be dynamically inserted here -->
+        <div class="welcome-message">
+            <h1>Welcome to MultiView</h1>
+            <p>Loading your selected tabs...</p>
+        </div>
+    </div>
+
+    <div id="settings-panel" class="settings-panel hidden">
+        <div class="settings-header">
+            <h2>Settings</h2>
+            <button id="close-settings-btn">×</button>
+        </div>
+
+        <div class="settings-content">
+            <div class="setting-group">
+                <label for="theme-select">Theme</label>
+                <select id="theme-select">
+                    <option value="dark-glass">Dark Glassmorphism</option>
+                    <option value="light-glass">Light Glassmorphism</option>
+                    <option value="dark-solid">Dark Solid</option>
+                    <option value="light-solid">Light Solid</option>
+                </select>
+            </div>
+
+            <div class="setting-group">
+                <label>Layout</label>
+                <div class="layout-buttons">
+                    <button data-layout="grid" class="layout-btn">Grid</button>
+                    <button data-layout="horizontal" class="layout-btn">Horizontal</button>
+                    <button data-layout="vertical" class="layout-btn">Vertical</button>
+                </div>
+            </div>
+
+            <div class="setting-group">
+                <label for="blur-range">Blur Amount</label>
+                <input type="range" id="blur-range" min="0" max="20" step="1" value="10">
+                <span id="blur-value">10px</span>
+            </div>
+
+            <div class="setting-group">
+                <label for="opacity-range">Panel Opacity</label>
+                <input type="range" id="opacity-range" min="0.3" max="1" step="0.05" value="0.8">
+                <span id="opacity-value">0.8</span>
+            </div>
+
+            <button id="apply-settings-btn" class="primary-btn">Apply Settings</button>
+        </div>
+    </div>
+
+    <script src="multiview.js"></script>
+</body>
+
+</html>

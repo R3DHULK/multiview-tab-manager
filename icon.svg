@@ -1,0 +1,56 @@
+<svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="backgroundGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a2e" />
+      <stop offset="100%" stop-color="#0f0f1a" />
+    </linearGradient>
+    
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#64ffda" />
+      <stop offset="100%" stop-color="#4e54c8" />
+    </linearGradient>
+    
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Main rounded rectangle background -->
+  <rect x="10" y="10" width="108" height="108" rx="24" fill="url(#backgroundGradient)" />
+  
+  <!-- Glass effect overlay -->
+  <rect x="10" y="10" width="108" height="108" rx="24" fill="rgba(255, 255, 255, 0.05)" />
+  
+  <!-- Border for glassmorphism effect -->
+  <rect x="10" y="10" width="108" height="108" rx="24" fill="none" stroke="rgba(255, 255, 255, 0.2)" stroke-width="1" />
+  
+  <!-- First tab panel -->
+  <rect x="20" y="20" width="42" height="42" rx="8" fill="rgba(255, 255, 255, 0.1)" />
+  <rect x="20" y="20" width="42" height="10" rx="8" fill="rgba(0, 0, 0, 0.2)" />
+  <circle cx="26" cy="25" r="2" fill="#64ffda" />
+  <line x1="30" y1="25" x2="55" y2="25" stroke="rgba(255, 255, 255, 0.5)" stroke-width="2" />
+  
+  <!-- Second tab panel -->
+  <rect x="66" y="20" width="42" height="42" rx="8" fill="rgba(255, 255, 255, 0.1)" />
+  <rect x="66" y="20" width="42" height="10" rx="8" fill="rgba(0, 0, 0, 0.2)" />
+  <circle cx="72" cy="25" r="2" fill="#4e54c8" />
+  <line x1="76" y1="25" x2="101" y2="25" stroke="rgba(255, 255, 255, 0.5)" stroke-width="2" />
+  
+  <!-- Third tab panel -->
+  <rect x="20" y="66" width="42" height="42" rx="8" fill="rgba(255, 255, 255, 0.1)" />
+  <rect x="20" y="66" width="42" height="10" rx="8" fill="rgba(0, 0, 0, 0.2)" />
+  <circle cx="26" cy="71" r="2" fill="#64ffda" />
+  <line x1="30" y1="71" x2="55" y2="71" stroke="rgba(255, 255, 255, 0.5)" stroke-width="2" />
+  
+  <!-- Fourth tab panel -->
+  <rect x="66" y="66" width="42" height="42" rx="8" fill="rgba(255, 255, 255, 0.1)" />
+  <rect x="66" y="66" width="42" height="10" rx="8" fill="rgba(0, 0, 0, 0.2)" />
+  <circle cx="72" cy="71" r="2" fill="#4e54c8" />
+  <line x1="76" y1="71" x2="101" y2="71" stroke="rgba(255, 255, 255, 0.5)" stroke-width="2" />
+  
+  <!-- Connection lines with gradient -->
+  <line x1="64" y1="40" x2="64" y2="88" stroke="url(#accentGradient)" stroke-width="2" stroke-dasharray="4 2" filter="url(#glow)" />
+  <line x1="40" y1="64" x2="88" y2="64" stroke="url(#accentGradient)" stroke-width="2" stroke-dasharray="4 2" filter="url(#glow)" />
+</svg>
